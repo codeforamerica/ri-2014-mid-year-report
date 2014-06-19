@@ -57,15 +57,21 @@ table {
 /* @end */
 
 div.site-width{
-	max-width: 42em;
+	max-width: 36em;
 	margin: 0 auto;
+		-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 1em;
 }
 
 img{
 	max-width: 100%;
 	-moz-border-radius: 0.2em;
-border-radius: 0.2em;
+	border-radius: 0.2em;
 }
+
+
 body{
 	font-family: Lora;
 	font-size: 18px;
@@ -78,14 +84,26 @@ a[href]:hover{ text-decoration: none; }
 
 p,
 li{
-	line-height: 1.5em;
-	margin-bottom: 0.75em;
+	line-height: 1.8em;
+	margin-bottom: 0.9em;
 	
 }
 
 ul{
-	margin-left: -1.4em;
+	margin-left: -0.2em;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	margin-bottom: 1.8em;
 }
+
+
+
+@media (min-width: 60em){
+	ul{
+		margin-left: -1.4em;
+	}
+}
+
 
 li{
 	padding-left: 1.4em;
@@ -95,6 +113,7 @@ li{
 
 li em{
 	font-weight: 600;
+	font-style: normal;
 }
 
 li::before{
@@ -104,7 +123,7 @@ li::before{
 	height: 0.5em;
 	position: absolute;
 	left: 0.3em;
-	top: 0.5em;
+	top: 0.67em;
 	-moz-border-radius: 0.125em;
 	border-radius: 0.125em;
 }
@@ -139,66 +158,81 @@ section{
 section h1,
 section h2{
 		font-family: Roboto;
-		font-size: 2.8em;
+		font-size: 2.4em;
 		font-weight: 100;
 		margin-bottom: 0.4em;
 }
 
-section h1{
+section h1{ 
+	font-family: Roboto Condensed;
 	letter-spacing: -0.03em;
-	margin-left: -0.05em;
 }
 
-section#our-story h1,
+section h1+h2{
+	margin-top: -1em;
+}
+
 section h2{
-			font-family: Roboto Condensed;
+			font-family: Roboto;
 			font-weight: 600;
-			font-size: 2em;
-			margin-bottom: 0.2em;
+			font-size: 1.6em;
+			margin-top: 0.9em;
+			margin-bottom: 0.33em;
 }
 
 section h3{
-	margin-bottom: 0.8em;
+	margin-bottom: 0.5em;
 	margin-top: 1em;
 	font-size: 1.2em;
 	font-style: italic;
 }
 
 section#introduction h1{
-	font-size: 3em;
+	font-size: 2em;
+	line-height: 1;
 	background: #222;
 	color: white;
-	margin: .2em -.45em 0.4em;
-	padding: 0 0.25em;
+	padding: 0.5em 1rem 0.5em;
+	margin-bottom: 0;
+	letter-spacing: normal;
+	font-family: Roboto Condensed;
+}
+
+@media (min-width: 40em){
+	section#introduction h1{
+		font-size: 3.6em;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	
+	section#introduction p{
+		font-size: 1.2em;
+		padding-left: 2em;
+		padding-right: 2em;
+	}
 }
 
 section#introduction{
-	font-family: merriweather;
-	font-size: 1.2em;
-	line-height: 1.6;
 	font-weight: 300;
 	position: relative;
-	background: url(images/code_across_team.png) center -300px no-repeat #f3f3f3;
-	background-size: 1024px;
-	min-height: 300px;
-	padding: 1em;
-	padding-top: 270px;
-	width: 1024px;
+	background: url(images/code_across_team_pano.jpg) center top no-repeat;
+	padding-top: 260px;
+	max-width: 50em;
 	margin: 0 auto 1em;
-		-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 section#introduction p{
-	line-height: 1.6em;
+	font-family: merriweather;
+	background:  #f3f3f3;
+	padding: 1rem;
 }
+
 section#introduction p:first-letter{
-	font-size: 3em;
+	font-size: 3.6em;
 	float: left;
 	margin-right: 0.2em;
 	margin-bottom: 0.1em;
-	margin-top: 0.28em;
+	margin-top: 0.31em;
 	color: #555;
 }
 
@@ -211,25 +245,46 @@ figure{
 	margin-bottom: 0.75em;
 	margin-top: 1.5em;
 }
+
 figcaption{
-	width: 10em;
-	position: absolute;
-	right: 100%;
-	margin-right: 1.4em;
-	top: 0;
 	font-size: 0.7em;
-	font-weight: 400;
+	font-weight: 500;
 	font-family: roboto;
+	background: #f3f3f3;
+	padding: 0.5em 1em;
+	-moz-border-radius: 0.2em;
+	border-radius: 0.2em;
+	margin-top: 0.5em;
 }
+
+@media (min-width: 64em){
+	figcaption{
+		width: 10em;
+		position: absolute;
+		right: 100%;
+		margin-right: 1.4em;
+		top: 0;
+		background: none;
+		padding: 0;
+		margin-top: 0;
+	}
+	
+}
+
 section#team div.team-description{
-	padding-left: 25%;
 	position: relative;
 	border-bottom: 1px solid #eee;
-	padding-bottom: 0.7em;
+	padding-bottom: 0.9em;
 }
 
 section#team div.team-description h3{
 	margin-bottom: 0.1em;
+	margin-right: 6em;
+	margin-top: 0.9em;
+}
+
+section#team div.team-description p:last-of-type{
+	margin-bottom: 0;
 }
 
 section#team div.team-description:last-of-type{
@@ -238,9 +293,26 @@ section#team div.team-description:last-of-type{
 }
 
 section#team div.team-description img{
-	position: absolute;
-	left: 0;
-	top: 0.4em;
-	width: 22.5%;
-	margin-right: 1em;
+	float: right;
+	margin-left: 1em;
+	margin-top: -1.4em;
+	margin-bottom: 0.5em;
+	width: 6em;
+}
+
+@media (min-width: 40em){
+	section#team div.team-description{
+		padding-left: 25%;
+	}
+	
+	section#team div.team-description img{
+		position: absolute;
+		left: 0;
+		top: 0.4em;
+		width: 22.5%;
+		margin-left: 0;
+		margin-top: 0;
+		
+	}
+	
 }
